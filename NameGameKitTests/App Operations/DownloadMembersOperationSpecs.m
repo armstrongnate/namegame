@@ -15,7 +15,6 @@
 SpecBegin(NGDownloadMembersOperationSpec)
 
 describe(@"DownloadMembersOperationSpec", ^{
-
 	it(@"downloads members json", ^{
 		NSError *error = nil;
 		NSURL *cacheFolder = [[NSFileManager defaultManager] URLForDirectory:NSCachesDirectory
