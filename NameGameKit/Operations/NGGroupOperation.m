@@ -30,6 +30,7 @@
 {
 	if (!(self = [super init])) return nil;
 
+	self.internalQueue.suspended = YES;
 	[operations enumerateObjectsUsingBlock:^(NSOperation *operation, NSUInteger idx, BOOL *stop) {
 		[self addOperation:operation];
 	}];
@@ -40,6 +41,11 @@
 - (void)addOperation:(NSOperation *)operation
 {
 	[self.internalQueue addOperation:operation];
+}
+
+- (void)execute
+{
+	self.internalQueue.suspended = NO;
 }
 
 @end
