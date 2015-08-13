@@ -27,6 +27,9 @@
 		439AFF7B1B7CD74700C71B09 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF791B7CD74700C71B09 /* Expecta.framework */; };
 		439AFF7C1B7CD74700C71B09 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF7A1B7CD74700C71B09 /* Specta.framework */; };
 		439AFF811B7CE74A00C71B09 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF801B7CE74A00C71B09 /* libOCMock.a */; };
+		439AFF8E1B7CED9F00C71B09 /* DownloadMembersOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF8D1B7CED9F00C71B09 /* DownloadMembersOperationSpecs.m */; };
+		439AFF921B7CEFD800C71B09 /* NGDownloadMembersOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF901B7CEFD800C71B09 /* NGDownloadMembersOperation.h */; };
+		439AFF931B7CEFD800C71B09 /* NGDownloadMembersOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF911B7CEFD800C71B09 /* NGDownloadMembersOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		439AFF891B7CE77600C71B09 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
 		439AFF8A1B7CE77600C71B09 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
 		439AFF8B1B7CE77600C71B09 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		439AFF8D1B7CED9F00C71B09 /* DownloadMembersOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DownloadMembersOperationSpecs.m; path = "App Operations/DownloadMembersOperationSpecs.m"; sourceTree = "<group>"; };
+		439AFF901B7CEFD800C71B09 /* NGDownloadMembersOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGDownloadMembersOperation.h; path = "App Operations/NGDownloadMembersOperation.h"; sourceTree = "<group>"; };
+		439AFF911B7CEFD800C71B09 /* NGDownloadMembersOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGDownloadMembersOperation.m; path = "App Operations/NGDownloadMembersOperation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +222,7 @@
 		439AFF4B1B7C1FF500C71B09 /* NameGameKit */ = {
 			isa = PBXGroup;
 			children = (
+				439AFF8F1B7CEFB900C71B09 /* App Operations */,
 				439AFF6A1B7C406D00C71B09 /* Operations */,
 				439AFF4E1B7C1FF500C71B09 /* NameGameKit.h */,
 				439AFF4C1B7C1FF500C71B09 /* Supporting Files */,
@@ -234,7 +241,8 @@
 		439AFF5A1B7C1FF500C71B09 /* NameGameKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				439AFF7F1B7CD7AB00C71B09 /* OperationSpecs */,
+				439AFF8C1B7CED7400C71B09 /* App Operation Specs */,
+				439AFF7F1B7CD7AB00C71B09 /* Operation Specs */,
 				439AFF5B1B7C1FF500C71B09 /* Supporting Files */,
 			);
 			path = NameGameKitTests;
@@ -272,12 +280,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		439AFF7F1B7CD7AB00C71B09 /* OperationSpecs */ = {
+		439AFF7F1B7CD7AB00C71B09 /* Operation Specs */ = {
 			isa = PBXGroup;
 			children = (
 				439AFF771B7CD6F600C71B09 /* NGURLSessionTaskOperationSpecs.m */,
 			);
-			name = OperationSpecs;
+			name = "Operation Specs";
 			sourceTree = "<group>";
 		};
 		439AFF821B7CE77600C71B09 /* OCMock */ = {
@@ -297,6 +305,23 @@
 			path = lib/OCMock;
 			sourceTree = "<group>";
 		};
+		439AFF8C1B7CED7400C71B09 /* App Operation Specs */ = {
+			isa = PBXGroup;
+			children = (
+				439AFF8D1B7CED9F00C71B09 /* DownloadMembersOperationSpecs.m */,
+			);
+			name = "App Operation Specs";
+			sourceTree = "<group>";
+		};
+		439AFF8F1B7CEFB900C71B09 /* App Operations */ = {
+			isa = PBXGroup;
+			children = (
+				439AFF901B7CEFD800C71B09 /* NGDownloadMembersOperation.h */,
+				439AFF911B7CEFD800C71B09 /* NGDownloadMembersOperation.m */,
+			);
+			name = "App Operations";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -305,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439AFF4F1B7C1FF500C71B09 /* NameGameKit.h in Headers */,
+				439AFF921B7CEFD800C71B09 /* NGDownloadMembersOperation.h in Headers */,
 				439AFF751B7C507700C71B09 /* NGURLSessionTaskOperation.h in Headers */,
 				439AFF6D1B7C415400C71B09 /* NGOperation.h in Headers */,
 				439AFF711B7C48AE00C71B09 /* NGGroupOperation.h in Headers */,
@@ -510,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439AFF931B7CEFD800C71B09 /* NGDownloadMembersOperation.m in Sources */,
 				439AFF721B7C48AE00C71B09 /* NGGroupOperation.m in Sources */,
 				439AFF6E1B7C415400C71B09 /* NGOperation.m in Sources */,
 				439AFF761B7C507700C71B09 /* NGURLSessionTaskOperation.m in Sources */,
@@ -520,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439AFF8E1B7CED9F00C71B09 /* DownloadMembersOperationSpecs.m in Sources */,
 				439AFF781B7CD6F700C71B09 /* NGURLSessionTaskOperationSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
