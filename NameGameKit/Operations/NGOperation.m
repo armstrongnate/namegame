@@ -10,8 +10,8 @@
 
 @interface NGOperation ()
 
-@property (nonatomic, getter=_isExecuting) BOOL _executing;
-@property (nonatomic, getter=_isFinished) BOOL _finished;
+@property (nonatomic) BOOL stateExecuting;
+@property (nonatomic) BOOL stateFinished;
 
 @end
 
@@ -26,18 +26,18 @@
 
 - (BOOL)isExecuting
 {
-	return self._isExecuting;
+	return self.stateExecuting;
 }
 
 - (BOOL)isFinished
 {
-	return self._isFinished;
+	return self.stateFinished;
 }
 
 - (void)start
 {
 	[self willChangeValueForKey:@"isExecuting"];
-	self._executing = YES;
+	self.stateExecuting = YES;
 	[self didChangeValueForKey:@"isExecuting"];
 	[self execute];
 }
@@ -52,7 +52,7 @@
 - (void)finish
 {
 	[self willChangeValueForKey:@"isFinished"];
-	self._finished = YES;
+	self.stateFinished = YES;
 	[self didChangeValueForKey:@"isFinished"];
 }
 
