@@ -26,6 +26,7 @@
 		439AFF781B7CD6F700C71B09 /* NGURLSessionTaskOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF771B7CD6F600C71B09 /* NGURLSessionTaskOperationSpecs.m */; };
 		439AFF7B1B7CD74700C71B09 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF791B7CD74700C71B09 /* Expecta.framework */; };
 		439AFF7C1B7CD74700C71B09 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF7A1B7CD74700C71B09 /* Specta.framework */; };
+		439AFF811B7CE74A00C71B09 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF801B7CE74A00C71B09 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,16 @@
 		439AFF771B7CD6F600C71B09 /* NGURLSessionTaskOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGURLSessionTaskOperationSpecs.m; path = Operations/NGURLSessionTaskOperationSpecs.m; sourceTree = "<group>"; };
 		439AFF791B7CD74700C71B09 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		439AFF7A1B7CD74700C71B09 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
+		439AFF801B7CE74A00C71B09 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = lib/libOCMock.a; sourceTree = "<group>"; };
+		439AFF831B7CE77600C71B09 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		439AFF841B7CE77600C71B09 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		439AFF851B7CE77600C71B09 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		439AFF861B7CE77600C71B09 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		439AFF871B7CE77600C71B09 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		439AFF881B7CE77600C71B09 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		439AFF891B7CE77600C71B09 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		439AFF8A1B7CE77600C71B09 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		439AFF8B1B7CE77600C71B09 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +143,7 @@
 				439AFF551B7C1FF500C71B09 /* NameGameKit.framework in Frameworks */,
 				439AFF7B1B7CD74700C71B09 /* Expecta.framework in Frameworks */,
 				439AFF7C1B7CD74700C71B09 /* Specta.framework in Frameworks */,
+				439AFF811B7CE74A00C71B09 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +264,8 @@
 		439AFF7E1B7CD78400C71B09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				439AFF821B7CE77600C71B09 /* OCMock */,
+				439AFF801B7CE74A00C71B09 /* libOCMock.a */,
 				439AFF791B7CD74700C71B09 /* Expecta.framework */,
 				439AFF7A1B7CD74700C71B09 /* Specta.framework */,
 			);
@@ -264,6 +278,23 @@
 				439AFF771B7CD6F600C71B09 /* NGURLSessionTaskOperationSpecs.m */,
 			);
 			name = OperationSpecs;
+			sourceTree = "<group>";
+		};
+		439AFF821B7CE77600C71B09 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				439AFF831B7CE77600C71B09 /* NSNotificationCenter+OCMAdditions.h */,
+				439AFF841B7CE77600C71B09 /* OCMArg.h */,
+				439AFF851B7CE77600C71B09 /* OCMConstraint.h */,
+				439AFF861B7CE77600C71B09 /* OCMLocation.h */,
+				439AFF871B7CE77600C71B09 /* OCMMacroState.h */,
+				439AFF881B7CE77600C71B09 /* OCMock.h */,
+				439AFF891B7CE77600C71B09 /* OCMockObject.h */,
+				439AFF8A1B7CE77600C71B09 /* OCMRecorder.h */,
+				439AFF8B1B7CE77600C71B09 /* OCMStubRecorder.h */,
+			);
+			name = OCMock;
+			path = lib/OCMock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,8 +757,23 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/lib/",
+				);
 				INFOPLIST_FILE = NameGameKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NameGame.app/NameGame";
 			};
@@ -741,8 +787,23 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/lib/",
+				);
 				INFOPLIST_FILE = NameGameKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lib",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NameGame.app/NameGame";
 			};
