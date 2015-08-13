@@ -8,7 +8,7 @@
 
 #import "NGGroupOperation.h"
 
-@interface NGURLSessionTaskOperation : NGGroupOperation
+@interface NGURLSessionTaskOperation : NGOperation
 
 - (instancetype)initWithTask:(NSURLSessionTask *)task;
 
