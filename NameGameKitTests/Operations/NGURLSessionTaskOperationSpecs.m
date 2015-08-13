@@ -9,7 +9,6 @@
 @import Foundation;
 @import Specta;
 @import Expecta;
-#import "OCMock.h"
 
 #import "NGURLSessionTaskOperation.h"
 
@@ -19,21 +18,23 @@ describe(@"NGURLSessionTaskOperation", ^{
 	it(@"should complete task and finish operation", ^{
 		__block NSURLSessionTask *task;
 		__block NGURLSessionTaskOperation *taskOperation;
-		__block id taskOperationMock;
 		waitUntil(^(DoneCallback done) {
         	NSOperationQueue *queue = [NSOperationQueue new];
+			queue.suspended = true;
+
         	NSURL *url = [NSURL URLWithString:@"http://api.namegame.willowtreemobile.com/"];
-        	void (^completionHandler)(NSURL *url , NSURLResponse *response, NSError *error) = ^void(NSURL *url, NSURLResponse *response, NSError *error) {
-				done();
-        	};
-        	task = [[NSURLSession sharedSession] downloadTaskWithURL:url completionHandler:completionHandler];
+			task = [[NSURLSession sharedSession] downloadTaskWithURL:url];
 			taskOperation = [[NGURLSessionTaskOperation alloc] initWithTask:task];
-			taskOperationMock = [OCMockObject partialMockForObject:taskOperation];
 			[queue addOperation:taskOperation];
+
+			NSBlockOperation *doneOperation = [NSBlockOperation blockOperationWithBlock:done];
+			[doneOperation addDependency:taskOperation];
+			[queue addOperation:doneOperation];
+
+			queue.suspended = false;
 		});
 		expect(task.state).to.equal(NSURLSessionTaskStateCompleted);
 		expect(taskOperation.finished).to.beTruthy();
-		[[taskOperationMock verify] finish];
 	});
 });
 
