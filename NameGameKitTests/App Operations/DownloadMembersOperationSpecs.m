@@ -9,7 +9,6 @@
 @import Foundation;
 @import Specta;
 @import Expecta;
-#import "OCMock.h"
 
 #import "NGDownloadMembersOperation.h"
 
@@ -27,16 +26,17 @@ describe(@"DownloadMembersOperationSpec", ^{
 		expect(error).to.beNil();
 		NSURL *cacheFile = [cacheFolder URLByAppendingPathComponent:@"members.json"];
 		__block NGDownloadMembersOperation *membersOperation;
-		__block NSOperationQueue *queue = [NSOperationQueue new];
 		waitUntil(^(DoneCallback done) {
+    		NSOperationQueue *queue = [NSOperationQueue new];
 			queue.suspended = true;
+
     		membersOperation = [[NGDownloadMembersOperation alloc] initWithCacheFile:cacheFile];
 			[queue addOperation:membersOperation];
-			NSOperation *doneOperation = [NSBlockOperation blockOperationWithBlock:^{
-				done();
-			}];
+
+			NSOperation *doneOperation = [NSBlockOperation blockOperationWithBlock:done];
 			[doneOperation addDependency:membersOperation];
 			[queue addOperation:doneOperation];
+
 			queue.suspended = false;
 		});
 		expect([[NSFileManager defaultManager] fileExistsAtPath:cacheFile.path]).to.beTruthy();
