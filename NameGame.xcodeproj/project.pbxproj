@@ -10,6 +10,9 @@
 		435BBD801B7D90490084A1C5 /* NGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 435BBD7E1B7D90490084A1C5 /* NGMember.h */; };
 		435BBD811B7D90490084A1C5 /* NGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD7F1B7D90490084A1C5 /* NGMember.m */; };
 		435BBD841B7D908C0084A1C5 /* NGMemberSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */; };
+		436808C01B7E276000C9417D /* NGGetMembersOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 436808BE1B7E276000C9417D /* NGGetMembersOperation.h */; };
+		436808C11B7E276000C9417D /* NGGetMembersOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808BF1B7E276000C9417D /* NGGetMembersOperation.m */; };
+		436808C31B7E278E00C9417D /* NGGetMembersOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808C21B7E278E00C9417D /* NGGetMembersOperationSpecs.m */; };
 		439AFF221B7C1F9200C71B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF211B7C1F9200C71B09 /* main.m */; };
 		439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF241B7C1F9200C71B09 /* AppDelegate.m */; };
 		439AFF281B7C1F9200C71B09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF271B7C1F9200C71B09 /* ViewController.m */; };
@@ -91,6 +94,9 @@
 		435BBD7E1B7D90490084A1C5 /* NGMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGMember.h; path = Models/NGMember.h; sourceTree = "<group>"; };
 		435BBD7F1B7D90490084A1C5 /* NGMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMember.m; path = Models/NGMember.m; sourceTree = "<group>"; };
 		435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMemberSpecs.m; path = Models/NGMemberSpecs.m; sourceTree = "<group>"; };
+		436808BE1B7E276000C9417D /* NGGetMembersOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGGetMembersOperation.h; path = "App Operations/NGGetMembersOperation.h"; sourceTree = "<group>"; };
+		436808BF1B7E276000C9417D /* NGGetMembersOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGGetMembersOperation.m; path = "App Operations/NGGetMembersOperation.m"; sourceTree = "<group>"; };
+		436808C21B7E278E00C9417D /* NGGetMembersOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGGetMembersOperationSpecs.m; path = "App Operations/NGGetMembersOperationSpecs.m"; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439AFF211B7C1F9200C71B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -353,6 +359,7 @@
 			children = (
 				439AFF8D1B7CED9F00C71B09 /* NGDownloadMembersOperationSpecs.m */,
 				439AFFA31B7D837D00C71B09 /* NGParseMembersOperationSpecs.m */,
+				436808C21B7E278E00C9417D /* NGGetMembersOperationSpecs.m */,
 			);
 			name = "App Operation Specs";
 			sourceTree = "<group>";
@@ -364,6 +371,8 @@
 				439AFF911B7CEFD800C71B09 /* NGDownloadMembersOperation.m */,
 				439AFF9F1B7D835300C71B09 /* NGParseMembersOperation.h */,
 				439AFFA01B7D835300C71B09 /* NGParseMembersOperation.m */,
+				436808BE1B7E276000C9417D /* NGGetMembersOperation.h */,
+				436808BF1B7E276000C9417D /* NGGetMembersOperation.m */,
 			);
 			name = "App Operations";
 			sourceTree = "<group>";
@@ -388,6 +397,7 @@
 				439AFF4F1B7C1FF500C71B09 /* NameGameKit.h in Headers */,
 				439AFF971B7D800700C71B09 /* NGPersistenceController.h in Headers */,
 				439AFF921B7CEFD800C71B09 /* NGDownloadMembersOperation.h in Headers */,
+				436808C01B7E276000C9417D /* NGGetMembersOperation.h in Headers */,
 				439AFF751B7C507700C71B09 /* NGURLSessionTaskOperation.h in Headers */,
 				439AFF6D1B7C415400C71B09 /* NGOperation.h in Headers */,
 				435BBD801B7D90490084A1C5 /* NGMember.h in Headers */,
@@ -601,6 +611,7 @@
 				439AFF721B7C48AE00C71B09 /* NGGroupOperation.m in Sources */,
 				439AFF6E1B7C415400C71B09 /* NGOperation.m in Sources */,
 				439AFF9B1B7D814F00C71B09 /* DataModel.xcdatamodeld in Sources */,
+				436808C11B7E276000C9417D /* NGGetMembersOperation.m in Sources */,
 				439AFF761B7C507700C71B09 /* NGURLSessionTaskOperation.m in Sources */,
 				439AFF981B7D800700C71B09 /* NGPersistenceController.m in Sources */,
 			);
@@ -610,6 +621,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436808C31B7E278E00C9417D /* NGGetMembersOperationSpecs.m in Sources */,
 				439AFF8E1B7CED9F00C71B09 /* NGDownloadMembersOperationSpecs.m in Sources */,
 				439AFF9E1B7D822F00C71B09 /* NGPersistenceHelper.m in Sources */,
 				435BBD841B7D908C0084A1C5 /* NGMemberSpecs.m in Sources */,
