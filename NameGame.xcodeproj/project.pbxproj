@@ -200,6 +200,15 @@
 			name = "Model Specs";
 			sourceTree = "<group>";
 		};
+		436808C51B7E320200C9417D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				439AFF9C1B7D822F00C71B09 /* NGPersistenceHelper.h */,
+				439AFF9D1B7D822F00C71B09 /* NGPersistenceHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		439AFF131B7C1F9100C71B09 = {
 			isa = PBXGroup;
 			children = (
@@ -291,8 +300,7 @@
 				439AFF8C1B7CED7400C71B09 /* App Operation Specs */,
 				439AFF7F1B7CD7AB00C71B09 /* Operation Specs */,
 				439AFF5B1B7C1FF500C71B09 /* Supporting Files */,
-				439AFF9C1B7D822F00C71B09 /* NGPersistenceHelper.h */,
-				439AFF9D1B7D822F00C71B09 /* NGPersistenceHelper.m */,
+				436808C51B7E320200C9417D /* Helpers */,
 			);
 			path = NameGameKitTests;
 			sourceTree = "<group>";
