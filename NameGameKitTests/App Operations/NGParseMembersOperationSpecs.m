@@ -12,6 +12,7 @@
 
 #import "NGParseMembersOperation.h"
 #import "NGPersistenceHelper.h"
+#import "NGDownloadMembersOperation.h"
 
 SpecBegin(NGParseMembersOperationSpec)
 
@@ -44,7 +45,11 @@ describe(@"NGParseMembersOperation", ^{
 			NSOperationQueue *queue = [NSOperationQueue new];
 			queue.suspended = YES;
 
+			NGDownloadMembersOperation *downloadOperation = [[NGDownloadMembersOperation alloc] initWithCacheFile:cacheFile];
+			[queue addOperation:downloadOperation];
+
 			parseOperation = [[NGParseMembersOperation alloc] initWithCacheFile:cacheFile context:context];
+			[parseOperation addDependency:downloadOperation];
 			[queue addOperation:parseOperation];
 
 			NSBlockOperation *doneOperation = [NSBlockOperation blockOperationWithBlock:done];
@@ -53,7 +58,7 @@ describe(@"NGParseMembersOperation", ^{
 
 			queue.suspended = NO;
 		});
-		expect([[context insertedObjects] count] > 80).to.beTruthy();
+		expect([[context insertedObjects] count]).to.equal(81);
 	});
 
 });
