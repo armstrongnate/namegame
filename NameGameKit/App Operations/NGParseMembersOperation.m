@@ -57,7 +57,7 @@
 - (void)importMembers:(NSArray *)parsedMembers
 {
 	[parsedMembers enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
-		[self.importContext performBlock:^{
+		[self.importContext performBlockAndWait:^{
 			NGMember *member = [NGMember insertNewObjectInContext:self.importContext];
 			member.name = dict[@"name"];
 			member.pictureUrl = dict[@"url"];
@@ -66,7 +66,6 @@
     		[self.importContext save:&saveError];
     		NSAssert(saveError == nil, @"Save error: %@", saveError);
 		}];
-
 	}];
 }
 
