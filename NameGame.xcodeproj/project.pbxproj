@@ -13,9 +13,10 @@
 		436808C01B7E276000C9417D /* NGGetMembersOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 436808BE1B7E276000C9417D /* NGGetMembersOperation.h */; };
 		436808C11B7E276000C9417D /* NGGetMembersOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808BF1B7E276000C9417D /* NGGetMembersOperation.m */; };
 		436808C31B7E278E00C9417D /* NGGetMembersOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808C21B7E278E00C9417D /* NGGetMembersOperationSpecs.m */; };
+		436808CA1B7E3EF800C9417D /* SwipeStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808C91B7E3EF700C9417D /* SwipeStackView.m */; };
+		436808CE1B7EA10000C9417D /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808CD1B7EA10000C9417D /* LearnViewController.m */; };
 		439AFF221B7C1F9200C71B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF211B7C1F9200C71B09 /* main.m */; };
 		439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF241B7C1F9200C71B09 /* AppDelegate.m */; };
-		439AFF281B7C1F9200C71B09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF271B7C1F9200C71B09 /* ViewController.m */; };
 		439AFF2B1B7C1F9200C71B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF291B7C1F9200C71B09 /* Main.storyboard */; };
 		439AFF2D1B7C1F9200C71B09 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF2C1B7C1F9200C71B09 /* Images.xcassets */; };
 		439AFF301B7C1F9200C71B09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF2E1B7C1F9200C71B09 /* LaunchScreen.xib */; };
@@ -97,13 +98,15 @@
 		436808BE1B7E276000C9417D /* NGGetMembersOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGGetMembersOperation.h; path = "App Operations/NGGetMembersOperation.h"; sourceTree = "<group>"; };
 		436808BF1B7E276000C9417D /* NGGetMembersOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGGetMembersOperation.m; path = "App Operations/NGGetMembersOperation.m"; sourceTree = "<group>"; };
 		436808C21B7E278E00C9417D /* NGGetMembersOperationSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGGetMembersOperationSpecs.m; path = "App Operations/NGGetMembersOperationSpecs.m"; sourceTree = "<group>"; };
+		436808C81B7E3EF700C9417D /* SwipeStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwipeStackView.h; path = Views/SwipeStackView/SwipeStackView.h; sourceTree = "<group>"; };
+		436808C91B7E3EF700C9417D /* SwipeStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeStackView.m; path = Views/SwipeStackView/SwipeStackView.m; sourceTree = "<group>"; };
+		436808CC1B7EA10000C9417D /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LearnViewController.h; path = "View Controllers/LearnViewController.h"; sourceTree = "<group>"; };
+		436808CD1B7EA10000C9417D /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LearnViewController.m; path = "View Controllers/LearnViewController.m"; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439AFF211B7C1F9200C71B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		439AFF231B7C1F9200C71B09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		439AFF241B7C1F9200C71B09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		439AFF261B7C1F9200C71B09 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		439AFF271B7C1F9200C71B09 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		439AFF2A1B7C1F9200C71B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		439AFF2C1B7C1F9200C71B09 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		439AFF2F1B7C1F9200C71B09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -209,6 +212,32 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		436808C61B7E397B00C9417D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				436808C71B7E398100C9417D /* SwipeStackView */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		436808C71B7E398100C9417D /* SwipeStackView */ = {
+			isa = PBXGroup;
+			children = (
+				436808C81B7E3EF700C9417D /* SwipeStackView.h */,
+				436808C91B7E3EF700C9417D /* SwipeStackView.m */,
+			);
+			name = SwipeStackView;
+			sourceTree = "<group>";
+		};
+		436808CB1B7EA0E300C9417D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				436808CC1B7EA10000C9417D /* LearnViewController.h */,
+				436808CD1B7EA10000C9417D /* LearnViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		439AFF131B7C1F9100C71B09 = {
 			isa = PBXGroup;
 			children = (
@@ -235,10 +264,10 @@
 		439AFF1E1B7C1F9200C71B09 /* NameGame */ = {
 			isa = PBXGroup;
 			children = (
+				436808CB1B7EA0E300C9417D /* View Controllers */,
+				436808C61B7E397B00C9417D /* Views */,
 				439AFF231B7C1F9200C71B09 /* AppDelegate.h */,
 				439AFF241B7C1F9200C71B09 /* AppDelegate.m */,
-				439AFF261B7C1F9200C71B09 /* ViewController.h */,
-				439AFF271B7C1F9200C71B09 /* ViewController.m */,
 				439AFF291B7C1F9200C71B09 /* Main.storyboard */,
 				439AFF2C1B7C1F9200C71B09 /* Images.xcassets */,
 				439AFF2E1B7C1F9200C71B09 /* LaunchScreen.xib */,
@@ -596,9 +625,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439AFF281B7C1F9200C71B09 /* ViewController.m in Sources */,
+				436808CA1B7E3EF800C9417D /* SwipeStackView.m in Sources */,
 				439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */,
 				439AFF221B7C1F9200C71B09 /* main.m in Sources */,
+				436808CE1B7EA10000C9417D /* LearnViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
