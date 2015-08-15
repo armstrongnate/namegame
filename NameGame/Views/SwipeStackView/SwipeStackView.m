@@ -112,7 +112,7 @@ NSUInteger const NumberOfViewsInStack = 3;
 
 		CGPoint translation = [gesture translationInView:self];
 		CGPoint velocity = [gesture velocityInView:self];
-		CGFloat translationAmount = velocity.x > 0 ? translation.x : translation.y;
+		CGFloat translationAmount = fabs(velocity.x);
 		CGFloat percent = translationAmount / DragAmount;
 		percent = fmaxf(percent, 0.0);
 		percent = fminf(percent, 1.0);
