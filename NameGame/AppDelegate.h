@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

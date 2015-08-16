@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		435BBD801B7D90490084A1C5 /* NGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 435BBD7E1B7D90490084A1C5 /* NGMember.h */; };
+		435BBD801B7D90490084A1C5 /* NGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 435BBD7E1B7D90490084A1C5 /* NGMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		435BBD811B7D90490084A1C5 /* NGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD7F1B7D90490084A1C5 /* NGMember.m */; };
 		435BBD841B7D908C0084A1C5 /* NGMemberSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */; };
-		436808C01B7E276000C9417D /* NGGetMembersOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 436808BE1B7E276000C9417D /* NGGetMembersOperation.h */; };
+		436808C01B7E276000C9417D /* NGGetMembersOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 436808BE1B7E276000C9417D /* NGGetMembersOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		436808C11B7E276000C9417D /* NGGetMembersOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808BF1B7E276000C9417D /* NGGetMembersOperation.m */; };
 		436808C31B7E278E00C9417D /* NGGetMembersOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808C21B7E278E00C9417D /* NGGetMembersOperationSpecs.m */; };
 		436808CA1B7E3EF800C9417D /* SwipeStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808C91B7E3EF700C9417D /* SwipeStackView.m */; };
 		436808CE1B7EA10000C9417D /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808CD1B7EA10000C9417D /* LearnViewController.m */; };
+		436809031B7FEA6600C9417D /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809001B7FEA6600C9417D /* JMImageCache.m */; };
+		436809041B7FEA6600C9417D /* UIImageView+JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */; };
 		439AFF221B7C1F9200C71B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF211B7C1F9200C71B09 /* main.m */; };
 		439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF241B7C1F9200C71B09 /* AppDelegate.m */; };
 		439AFF2B1B7C1F9200C71B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF291B7C1F9200C71B09 /* Main.storyboard */; };
@@ -24,9 +26,9 @@
 		439AFF551B7C1FF500C71B09 /* NameGameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF4A1B7C1FF500C71B09 /* NameGameKit.framework */; };
 		439AFF611B7C1FF500C71B09 /* NameGameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF4A1B7C1FF500C71B09 /* NameGameKit.framework */; };
 		439AFF621B7C1FF500C71B09 /* NameGameKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF4A1B7C1FF500C71B09 /* NameGameKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		439AFF6D1B7C415400C71B09 /* NGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF6B1B7C415400C71B09 /* NGOperation.h */; };
+		439AFF6D1B7C415400C71B09 /* NGOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF6B1B7C415400C71B09 /* NGOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		439AFF6E1B7C415400C71B09 /* NGOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF6C1B7C415400C71B09 /* NGOperation.m */; };
-		439AFF711B7C48AE00C71B09 /* NGGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF6F1B7C48AE00C71B09 /* NGGroupOperation.h */; };
+		439AFF711B7C48AE00C71B09 /* NGGroupOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF6F1B7C48AE00C71B09 /* NGGroupOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		439AFF721B7C48AE00C71B09 /* NGGroupOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF701B7C48AE00C71B09 /* NGGroupOperation.m */; };
 		439AFF751B7C507700C71B09 /* NGURLSessionTaskOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF731B7C507700C71B09 /* NGURLSessionTaskOperation.h */; };
 		439AFF761B7C507700C71B09 /* NGURLSessionTaskOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF741B7C507700C71B09 /* NGURLSessionTaskOperation.m */; };
@@ -37,7 +39,7 @@
 		439AFF8E1B7CED9F00C71B09 /* NGDownloadMembersOperationSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF8D1B7CED9F00C71B09 /* NGDownloadMembersOperationSpecs.m */; };
 		439AFF921B7CEFD800C71B09 /* NGDownloadMembersOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF901B7CEFD800C71B09 /* NGDownloadMembersOperation.h */; };
 		439AFF931B7CEFD800C71B09 /* NGDownloadMembersOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF911B7CEFD800C71B09 /* NGDownloadMembersOperation.m */; };
-		439AFF971B7D800700C71B09 /* NGPersistenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF951B7D800600C71B09 /* NGPersistenceController.h */; };
+		439AFF971B7D800700C71B09 /* NGPersistenceController.h in Headers */ = {isa = PBXBuildFile; fileRef = 439AFF951B7D800600C71B09 /* NGPersistenceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		439AFF981B7D800700C71B09 /* NGPersistenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF961B7D800600C71B09 /* NGPersistenceController.m */; };
 		439AFF9B1B7D814F00C71B09 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF991B7D814F00C71B09 /* DataModel.xcdatamodeld */; };
 		439AFF9E1B7D822F00C71B09 /* NGPersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF9D1B7D822F00C71B09 /* NGPersistenceHelper.m */; };
@@ -102,6 +104,10 @@
 		436808C91B7E3EF700C9417D /* SwipeStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeStackView.m; path = Views/SwipeStackView/SwipeStackView.m; sourceTree = "<group>"; };
 		436808CC1B7EA10000C9417D /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LearnViewController.h; path = "View Controllers/LearnViewController.h"; sourceTree = "<group>"; };
 		436808CD1B7EA10000C9417D /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LearnViewController.m; path = "View Controllers/LearnViewController.m"; sourceTree = "<group>"; };
+		436808FF1B7FEA6600C9417D /* JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JMImageCache.h; path = Vendor/JMImageCache/JMImageCache.h; sourceTree = "<group>"; };
+		436809001B7FEA6600C9417D /* JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMImageCache.m; path = Vendor/JMImageCache/JMImageCache.m; sourceTree = "<group>"; };
+		436809011B7FEA6600C9417D /* UIImageView+JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+JMImageCache.h"; path = "Vendor/JMImageCache/UIImageView+JMImageCache.h"; sourceTree = "<group>"; };
+		436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+JMImageCache.m"; path = "Vendor/JMImageCache/UIImageView+JMImageCache.m"; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439AFF211B7C1F9200C71B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -238,6 +244,25 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		436808CF1B7FEA0E00C9417D /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				436809051B7FEA6D00C9417D /* JMImageCache */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		436809051B7FEA6D00C9417D /* JMImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				436808FF1B7FEA6600C9417D /* JMImageCache.h */,
+				436809001B7FEA6600C9417D /* JMImageCache.m */,
+				436809011B7FEA6600C9417D /* UIImageView+JMImageCache.h */,
+				436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */,
+			);
+			name = JMImageCache;
+			sourceTree = "<group>";
+		};
 		439AFF131B7C1F9100C71B09 = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +272,7 @@
 				439AFF5A1B7C1FF500C71B09 /* NameGameKitTests */,
 				439AFF7E1B7CD78400C71B09 /* Frameworks */,
 				439AFF1D1B7C1F9200C71B09 /* Products */,
+				436808CF1B7FEA0E00C9417D /* Vendor */,
 			);
 			sourceTree = "<group>";
 		};
@@ -627,7 +653,9 @@
 			files = (
 				436808CA1B7E3EF800C9417D /* SwipeStackView.m in Sources */,
 				439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */,
+				436809041B7FEA6600C9417D /* UIImageView+JMImageCache.m in Sources */,
 				439AFF221B7C1F9200C71B09 /* main.m in Sources */,
+				436809031B7FEA6600C9417D /* JMImageCache.m in Sources */,
 				436808CE1B7EA10000C9417D /* LearnViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NGPersistenceController.h"
+#import "NGGetMembersOperation.h"
+#import "NGMember.h"
 
 //! Project version number for NameGameKit.
 FOUNDATION_EXPORT double NameGameKitVersionNumber;

@@ -7,11 +7,15 @@
 //
 
 @import UIKit;
+@import CoreData;
 
 #import "SwipeStackView.h"
 
 @interface LearnViewController : UIViewController <SwipeStackViewDataSource>
 
 @property (nonatomic, strong) IBOutlet SwipeStackView *membersStackView;
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
+- (IBAction)againButtonTapped:(id)sender;
 
 @end

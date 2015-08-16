@@ -21,7 +21,6 @@
 
 @property (nonatomic, weak) id <SwipeStackViewDataSource> dataSource;
 
-- (id)dequeueReusableViewForIndexPath:(NSIndexPath *)indexPath;
 - (void)reload;
 
 @end

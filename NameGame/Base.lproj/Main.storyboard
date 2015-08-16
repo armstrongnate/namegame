@@ -25,11 +25,22 @@
                                     <constraint firstAttribute="height" constant="300" id="sqM-Gx-bv4"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEb-18-tRd">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="againButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wMc-tI-wqB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Wjz-ad-B7b" secondAttribute="trailing" constant="-16" id="4QA-yy-vwd"/>
+                            <constraint firstAttribute="centerY" secondItem="SEb-18-tRd" secondAttribute="centerY" id="86u-nJ-4fz"/>
                             <constraint firstItem="Wjz-ad-B7b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="bAC-QL-LJR"/>
+                            <constraint firstAttribute="centerX" secondItem="SEb-18-tRd" secondAttribute="centerX" id="jEl-9d-elw"/>
                             <constraint firstAttribute="centerX" secondItem="Wjz-ad-B7b" secondAttribute="centerX" id="pVT-kI-rIg"/>
                             <constraint firstAttribute="centerY" secondItem="Wjz-ad-B7b" secondAttribute="centerY" id="upS-IF-fgo"/>
                             <constraint firstAttribute="centerX" secondItem="Wjz-ad-B7b" secondAttribute="centerX" id="vdo-fs-UoU"/>

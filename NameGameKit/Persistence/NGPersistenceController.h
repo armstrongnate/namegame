@@ -13,6 +13,8 @@ typedef void (^InitCallbackBlock)(void);
 
 @interface NGPersistenceController : NSObject
 
+@property (strong, readonly) NSManagedObjectContext *managedObjectContext;
+
 - (id)initWithCallback:(InitCallbackBlock)callback;
 - (void)save;
 

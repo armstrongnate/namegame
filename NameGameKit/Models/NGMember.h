@@ -15,5 +15,6 @@
 @property (nonatomic, retain) NSString *pictureUrl;
 
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
++ (NSString *)entityName;
 
 @end

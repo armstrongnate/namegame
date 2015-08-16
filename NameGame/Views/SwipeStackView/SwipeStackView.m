@@ -8,7 +8,7 @@
 
 #import "SwipeStackView.h"
 
-// max number of views to reuse
+// max number of views
 NSUInteger const NumberOfViewsInStack = 3;
 
 @interface SwipeStackView ()
@@ -64,12 +64,6 @@ NSUInteger const NumberOfViewsInStack = 3;
 	}];
 	self.currentIndexPath = [NSIndexPath indexPathForItem:0 inSection:0];
 	[self load];
-}
-
-- (id)dequeueReusableViewForIndexPath:(NSIndexPath *)indexPath
-{
-	if ([self.subviews count] < 3) return nil;
-	return [self.subviews firstObject];
 }
 
 - (UIView *)askDataSourceForView
