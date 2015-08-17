@@ -9,7 +9,7 @@
 @import NameGameKit;
 
 #import "LearnViewController.h"
-#import "JMImageCache.h"
+#import "MemberView.h"
 
 @interface LearnViewController ()
 
@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.membersStackView.dataSource = self;
+	[self.membersStackView setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 
 - (void)setContext:(NSManagedObjectContext *)context
@@ -47,6 +48,7 @@
     	}];
     	[queue addOperation:membersOperation];
 	}
+	[self updateUI];
 }
 
 - (void)updateUI
@@ -73,14 +75,8 @@
 
 - (UIView *)swipeStackView:(SwipeStackView *)swipeStackView viewForIndexPath:(NSIndexPath *)indexPath
 {
-	UIView *view = [[UIView alloc] initWithFrame:swipeStackView.bounds];
-	UIImageView *image = [[UIImageView alloc] initWithFrame:swipeStackView.bounds];
 	NGMember *member = [self.fetchedResultsController objectAtIndexPath:indexPath];
-	if (member != nil)
-	{
-    	[image setImageWithURL:[NSURL URLWithString:member.pictureUrl]];
-	}
-	[view addSubview:image];
+	MemberView *view = [[MemberView alloc] initWithMember:member];
 	return view;
 }
 

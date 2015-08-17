@@ -19,6 +19,7 @@
 		436808CE1B7EA10000C9417D /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436808CD1B7EA10000C9417D /* LearnViewController.m */; };
 		436809031B7FEA6600C9417D /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809001B7FEA6600C9417D /* JMImageCache.m */; };
 		436809041B7FEA6600C9417D /* UIImageView+JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */; };
+		436809081B804E4C00C9417D /* MemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809071B804E4C00C9417D /* MemberView.m */; };
 		439AFF221B7C1F9200C71B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF211B7C1F9200C71B09 /* main.m */; };
 		439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF241B7C1F9200C71B09 /* AppDelegate.m */; };
 		439AFF2B1B7C1F9200C71B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF291B7C1F9200C71B09 /* Main.storyboard */; };
@@ -112,6 +113,8 @@
 		436809001B7FEA6600C9417D /* JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMImageCache.m; path = Vendor/JMImageCache/JMImageCache.m; sourceTree = "<group>"; };
 		436809011B7FEA6600C9417D /* UIImageView+JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+JMImageCache.h"; path = "Vendor/JMImageCache/UIImageView+JMImageCache.h"; sourceTree = "<group>"; };
 		436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+JMImageCache.m"; path = "Vendor/JMImageCache/UIImageView+JMImageCache.m"; sourceTree = "<group>"; };
+		436809061B804E4C00C9417D /* MemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberView.h; path = Views/MemberView.h; sourceTree = "<group>"; };
+		436809071B804E4C00C9417D /* MemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberView.m; path = Views/MemberView.m; sourceTree = "<group>"; };
 		436809091B810B1000C9417D /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				436808C71B7E398100C9417D /* SwipeStackView */,
+				436809061B804E4C00C9417D /* MemberView.h */,
+				436809071B804E4C00C9417D /* MemberView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 			files = (
 				436808CA1B7E3EF800C9417D /* SwipeStackView.m in Sources */,
 				439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */,
+				436809081B804E4C00C9417D /* MemberView.m in Sources */,
 				436809041B7FEA6600C9417D /* UIImageView+JMImageCache.m in Sources */,
 				439AFF221B7C1F9200C71B09 /* main.m in Sources */,
 				436809031B7FEA6600C9417D /* JMImageCache.m in Sources */,
