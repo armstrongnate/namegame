@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.membersStackView.dataSource = self;
+	self.membersStackView.delegate = self;
 	[self.membersStackView setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 
@@ -78,6 +79,20 @@
 	NGMember *member = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	MemberView *view = [[MemberView alloc] initWithMember:member];
 	return view;
+}
+
+#pragma - SwipeStackViewDelegate
+
+- (void)swipeStackView:(SwipeStackView *)swipeStackView willSwipeView:(UIView *)view withVelocity:(CGPoint)velocity
+{
+	MemberView *memberView = (MemberView *)view;
+	memberView.member.memorized = velocity.x > 0;
+}
+
+- (void)swipeStackView:(SwipeStackView *)swipeStackView didCancelSwipingView:(UIView *)view
+{
+	MemberView *memberView = (MemberView *)view;
+	[memberView hideMemorizedIndicators];
 }
 
 @end

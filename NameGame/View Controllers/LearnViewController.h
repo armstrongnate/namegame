@@ -11,7 +11,7 @@
 
 #import "SwipeStackView.h"
 
-@interface LearnViewController : UIViewController <SwipeStackViewDataSource>
+@interface LearnViewController : UIViewController <SwipeStackViewDataSource, SwipeStackViewDelegate>
 
 @property (nonatomic, strong) IBOutlet SwipeStackView *membersStackView;
 @property (nonatomic, strong) NSManagedObjectContext *context;

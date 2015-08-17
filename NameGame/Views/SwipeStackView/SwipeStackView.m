@@ -111,7 +111,7 @@ NSUInteger const NumberOfViewsInStack = 3;
 			[gesture setTranslation:CGPointZero inView:self.superview];
 
 			const CGFloat DragAmount = 200;
-			const CGFloat Threshold = 0.4;
+			const CGFloat Threshold = 0.5;
 
 			CGPoint velocity = [gesture velocityInView:self];
 			CGFloat translationAmount = fabs(velocity.x);
@@ -119,11 +119,25 @@ NSUInteger const NumberOfViewsInStack = 3;
 			percent = fmaxf(percent, 0.0);
 			percent = fminf(percent, 1.0);
 			_shouldComplete = percent >= Threshold;
+			if (_shouldComplete)
+			{
+				CGFloat mid = CGRectGetMidX(self.frame);
+				if (velocity.x < 0 && gesture.view.center.x > mid) _shouldComplete = false;
+				else if (velocity.x > 0 && gesture.view.center.x < mid) _shouldComplete = false;
+			}
+			if (_shouldComplete && [self.delegate respondsToSelector:@selector(swipeStackView:willSwipeView:withVelocity:)])
+			{
+				[self.delegate swipeStackView:self willSwipeView:gesture.view withVelocity:velocity];
+			}
 			break;
 		}
 		case UIGestureRecognizerStateEnded:
 		case UIGestureRecognizerStateCancelled:
 			[self.animator removeAllBehaviors];
+			if ([self.delegate respondsToSelector:@selector(swipeStackView:didCancelSwipingView:)])
+			{
+				[self.delegate swipeStackView:self didCancelSwipingView:gesture.view];
+			}
 			if (gesture.state == UIGestureRecognizerStateCancelled || !_shouldComplete)
 			{
 				[self cancelSwipeGesture:gesture startCenter:startCenter];
@@ -140,6 +154,7 @@ NSUInteger const NumberOfViewsInStack = 3;
 
 - (void)finishSwipe:(UIPanGestureRecognizer *)gesture startCenter:(CGPoint)startCenter;
 {
+	gesture.enabled = NO;
 	CGPoint velocity = [gesture velocityInView:self];
 	UIPushBehavior *push = [[UIPushBehavior alloc] initWithItems:@[gesture.view] mode:UIPushBehaviorModeInstantaneous];
 	push.pushDirection = CGVectorMake(velocity.x * 3, velocity.y);

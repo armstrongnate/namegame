@@ -13,6 +13,7 @@
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *pictureUrl;
+@property (nonatomic) BOOL memorized;
 
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
 + (NSString *)entityName;

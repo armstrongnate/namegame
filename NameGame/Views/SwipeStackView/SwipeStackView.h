@@ -10,16 +10,25 @@
 
 @class SwipeStackView;
 
-@protocol SwipeStackViewDataSource
+@protocol SwipeStackViewDataSource <NSObject>
 
 - (UIView *)swipeStackView:(SwipeStackView *)swipeStackView viewForIndexPath:(NSIndexPath *)indexPath;
 - (NSUInteger)numberOfViewsInStack;
 
 @end
 
+@protocol SwipeStackViewDelegate <NSObject>
+
+@optional
+- (void)swipeStackView:(SwipeStackView *)swipeStackView willSwipeView:(UIView *)view withVelocity:(CGPoint)velocity;
+- (void)swipeStackView:(SwipeStackView *)swipeStackView didCancelSwipingView:(UIView *)view;
+
+@end
+
 @interface SwipeStackView : UIView
 
 @property (nonatomic, weak) id <SwipeStackViewDataSource> dataSource;
+@property (nonatomic, weak) id <SwipeStackViewDelegate> delegate;
 
 - (void)reload;
 

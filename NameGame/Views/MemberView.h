@@ -17,5 +17,6 @@
 @property (nonatomic, strong) UIButton *showNameButton;
 
 - (instancetype)initWithMember:(NGMember *)member;
+- (void)hideMemorizedIndicators;
 
 @end

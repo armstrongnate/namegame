@@ -12,6 +12,7 @@
 
 @dynamic name;
 @dynamic pictureUrl;
+@dynamic memorized;
 
 + (NSString *)entityName
 {
