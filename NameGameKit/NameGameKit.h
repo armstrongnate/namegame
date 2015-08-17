@@ -9,6 +9,7 @@
 #import "NGPersistenceController.h"
 #import "NGGetMembersOperation.h"
 #import "NGMember.h"
+#import "UIColor+Colors.h"
 
 //! Project version number for NameGameKit.
 FOUNDATION_EXPORT double NameGameKitVersionNumber;

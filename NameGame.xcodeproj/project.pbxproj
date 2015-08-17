@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4334BB431B81AB5000E8235A /* UIColor+Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = 4334BB411B81AB5000E8235A /* UIColor+Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4334BB441B81AB5000E8235A /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4334BB421B81AB5000E8235A /* UIColor+Colors.m */; };
 		435BBD801B7D90490084A1C5 /* NGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 435BBD7E1B7D90490084A1C5 /* NGMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		435BBD811B7D90490084A1C5 /* NGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD7F1B7D90490084A1C5 /* NGMember.m */; };
 		435BBD841B7D908C0084A1C5 /* NGMemberSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */; };
@@ -94,6 +96,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4334BB411B81AB5000E8235A /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Colors.h"; path = "Helpers/UIColor+Colors.h"; sourceTree = "<group>"; };
+		4334BB421B81AB5000E8235A /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "Helpers/UIColor+Colors.m"; sourceTree = "<group>"; };
 		435BBD7E1B7D90490084A1C5 /* NGMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGMember.h; path = Models/NGMember.h; sourceTree = "<group>"; };
 		435BBD7F1B7D90490084A1C5 /* NGMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMember.m; path = Models/NGMember.m; sourceTree = "<group>"; };
 		435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMemberSpecs.m; path = Models/NGMemberSpecs.m; sourceTree = "<group>"; };
@@ -193,6 +197,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4334BB3F1B81AB2E00E8235A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4334BB411B81AB5000E8235A /* UIColor+Colors.h */,
+				4334BB421B81AB5000E8235A /* UIColor+Colors.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		435BBD7D1B7D90250084A1C5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +345,7 @@
 		439AFF4B1B7C1FF500C71B09 /* NameGameKit */ = {
 			isa = PBXGroup;
 			children = (
+				4334BB3F1B81AB2E00E8235A /* Helpers */,
 				435BBD7D1B7D90250084A1C5 /* Models */,
 				439AFF941B7D7FBF00C71B09 /* Persistence */,
 				439AFF8F1B7CEFB900C71B09 /* App Operations */,
@@ -461,6 +475,7 @@
 			files = (
 				439AFF4F1B7C1FF500C71B09 /* NameGameKit.h in Headers */,
 				439AFF971B7D800700C71B09 /* NGPersistenceController.h in Headers */,
+				4334BB431B81AB5000E8235A /* UIColor+Colors.h in Headers */,
 				439AFF921B7CEFD800C71B09 /* NGDownloadMembersOperation.h in Headers */,
 				436808C01B7E276000C9417D /* NGGetMembersOperation.h in Headers */,
 				439AFF751B7C507700C71B09 /* NGURLSessionTaskOperation.h in Headers */,
@@ -680,6 +695,7 @@
 				439AFF6E1B7C415400C71B09 /* NGOperation.m in Sources */,
 				439AFF9B1B7D814F00C71B09 /* DataModel.xcdatamodeld in Sources */,
 				436808C11B7E276000C9417D /* NGGetMembersOperation.m in Sources */,
+				4334BB441B81AB5000E8235A /* UIColor+Colors.m in Sources */,
 				439AFF761B7C507700C71B09 /* NGURLSessionTaskOperation.m in Sources */,
 				439AFF981B7D800700C71B09 /* NGPersistenceController.m in Sources */,
 			);

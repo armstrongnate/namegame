@@ -21,6 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	[self setNavigationBarColors];
 	self.persistenceController = [[NGPersistenceController alloc] initWithCallback:^{
 		[self loadUI];
 	}];
@@ -51,8 +52,18 @@
 
 - (void)loadUI
 {
-	LearnViewController *learn = (LearnViewController *)self.window.rootViewController;
+	UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+	LearnViewController *learn = (LearnViewController *)nav.topViewController;
 	learn.context = self.persistenceController.managedObjectContext;
 }
+
+- (void)setNavigationBarColors
+{
+	UINavigationBar *appearance = [UINavigationBar appearance];
+	appearance.barTintColor = [UIColor primaryColor];
+	appearance.tintColor = [UIColor whiteColor];
+	appearance.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
+}
+
 
 @end
