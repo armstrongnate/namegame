@@ -108,6 +108,7 @@
 		436809001B7FEA6600C9417D /* JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JMImageCache.m; path = Vendor/JMImageCache/JMImageCache.m; sourceTree = "<group>"; };
 		436809011B7FEA6600C9417D /* UIImageView+JMImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+JMImageCache.h"; path = "Vendor/JMImageCache/UIImageView+JMImageCache.h"; sourceTree = "<group>"; };
 		436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+JMImageCache.m"; path = "Vendor/JMImageCache/UIImageView+JMImageCache.m"; sourceTree = "<group>"; };
+		436809091B810B1000C9417D /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439AFF211B7C1F9200C71B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -307,6 +308,7 @@
 			children = (
 				439AFF201B7C1F9200C71B09 /* Info.plist */,
 				439AFF211B7C1F9200C71B09 /* main.m */,
+				436809091B810B1000C9417D /* Playground.playground */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
