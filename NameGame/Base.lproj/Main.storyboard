@@ -33,8 +33,8 @@
                                 </variation>
                             </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEb-18-tRd">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="278" y="285" width="43" height="30"/>
+                                <state key="normal" title="Again!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take the Quiz!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCJ-wa-2dR">
-                                        <rect key="frame" x="246" y="14.5" width="108.5" height="20.5"/>
+                                        <rect key="frame" x="246" y="14" width="108.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -88,6 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hHO-Wc-0yw"/>
                     <connections>
+                        <outlet property="againButton" destination="SEb-18-tRd" id="YPN-a4-v2f"/>
                         <outlet property="membersStackView" destination="Wjz-ad-B7b" id="VWU-ZO-jcB"/>
                     </connections>
                 </viewController>

@@ -22,6 +22,7 @@
 @optional
 - (void)swipeStackView:(SwipeStackView *)swipeStackView willSwipeView:(UIView *)view withVelocity:(CGPoint)velocity;
 - (void)swipeStackView:(SwipeStackView *)swipeStackView didCancelSwipingView:(UIView *)view;
+- (void)swipeStackViewDidFinish:(SwipeStackView *)swipStackView;
 
 @end
 

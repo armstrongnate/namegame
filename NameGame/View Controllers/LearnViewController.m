@@ -64,6 +64,7 @@
 
 - (IBAction)againButtonTapped:(id)sender
 {
+	self.againButton.hidden = YES;
 	[self updateUI];
 }
 
@@ -93,6 +94,11 @@
 {
 	MemberView *memberView = (MemberView *)view;
 	[memberView hideMemorizedIndicators];
+}
+
+- (void)swipeStackViewDidFinish:(SwipeStackView *)swipStackView
+{
+	self.againButton.hidden = NO;
 }
 
 @end

@@ -171,7 +171,17 @@ NSUInteger const NumberOfViewsInStack = 3;
 			[weakSelf.animator removeAllBehaviors];
 			[gesture.view removeFromSuperview];
 			UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan:)];
-			[[[self subviews] lastObject] addGestureRecognizer:pan];
+			if ([self subviews].count <= 0)
+			{
+				if ([self.delegate respondsToSelector:@selector(swipeStackViewDidFinish:)])
+				{
+					[self.delegate swipeStackViewDidFinish:self];
+				}
+			}
+			else
+			{
+    			[[[self subviews] lastObject] addGestureRecognizer:pan];
+			}
 		}
 	};
 	[self.animator addBehavior:push];
