@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *imageViews;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *scoreLabel;
 @property (nonatomic, strong) NGMembersQuiz *quiz;
 
 - (IBAction)imageViewWasTapped:(UITapGestureRecognizer *)tap;

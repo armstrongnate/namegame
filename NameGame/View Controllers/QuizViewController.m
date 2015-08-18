@@ -32,6 +32,11 @@
 - (void)nextQuestion
 {
 	NGQuizQuestion *question = [self.quiz nextQuestion];
+	if (question == nil)
+	{
+		[self finish];
+		return;
+	}
 	NGMember *member = (NGMember *)question.answer;
 	self.nameLabel.text = member.name;
 	[question.choices enumerateObjectsUsingBlock:^(NGMember *member, NSUInteger idx, BOOL *stop) {
@@ -46,7 +51,9 @@
 {
 	NSUInteger idx = [self.imageViews indexOfObject:tap.view];
 	NGMember *member = [self.question.choices objectAtIndex:idx];
-	if ([self.quiz checkAnswer:member toQuestion:self.question])
+	BOOL correct = [self.quiz checkAnswer:member toQuestion:self.question];
+	self.scoreLabel.text = [NSString stringWithFormat:@"Score: %lu", (unsigned long)[self.quiz score]];
+	if (correct)
 	{
 		[UIView animateWithDuration:0.5 animations:^{
 			[self nextQuestion];
@@ -56,6 +63,14 @@
 	{
     	tap.view.layer.opacity = 0.5;
 	}
+}
+
+- (void)finish
+{
+	self.nameLabel.hidden = YES;
+	[self.imageViews enumerateObjectsUsingBlock:^(UIImageView *imageView, NSUInteger idx, BOOL *stop) {
+		imageView.hidden = YES;
+	}];
 }
 
 @end
