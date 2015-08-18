@@ -33,8 +33,22 @@
 																				   cacheName:nil];
 	NSError *fetchError = nil;
 	[fetchedResultsController performFetch:&fetchError];
-	if (fetchError == nil) return [fetchedResultsController fetchedObjects];
+	if (fetchError == nil) return [self shuffleArray:[fetchedResultsController fetchedObjects]];
 	return @[];
+}
+
+- (NSArray *)shuffleArray:(NSArray *)array
+{
+
+	NSMutableArray *mutableArray = [[NSMutableArray alloc] initWithArray:array];
+    NSUInteger count = [mutableArray count];
+    for (uint i = 0; i < count - 1; ++i)
+    {
+    	int nElements = (int)(count - i);
+    	int n = arc4random_uniform(nElements) + i;
+    	[mutableArray exchangeObjectAtIndex:i withObjectAtIndex:n];
+    }
+	return [NSArray arrayWithArray:mutableArray];
 }
 
 @end
