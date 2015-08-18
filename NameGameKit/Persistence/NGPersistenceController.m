@@ -7,11 +7,13 @@
 //
 
 #import "NGPersistenceController.h"
+#import "NGPreferences.h"
 
 @interface NGPersistenceController()
 
 @property (strong, readwrite) NSManagedObjectContext *managedObjectContext;
 @property (strong) NSManagedObjectContext *privateContext;
+@property (nonatomic, strong) NGPreferences *prefs;
 @property (copy) InitCallbackBlock initCallback;
 
 - (void)initializeCoreData;
@@ -76,6 +78,7 @@
 		[[self privateContext] performBlock:^{
 			NSError *privateError = nil;
 			[[self privateContext] save:&privateError];
+			[self.prefs setHasDownloadedMembers:YES];
 		}];
 	}];
 }

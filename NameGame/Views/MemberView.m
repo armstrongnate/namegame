@@ -38,6 +38,7 @@
 	if (!_imageView)
 	{
 		_imageView = [UIImageView new];
+		_imageView.contentMode = UIViewContentModeScaleAspectFill;
 		[_imageView setTranslatesAutoresizingMaskIntoConstraints:NO];
 		[self addSubview:_imageView];
 	}
@@ -128,7 +129,7 @@
 	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(20)-[nameLabel]-|"
 																 options:0 metrics:nil
 																   views:NSDictionaryOfVariableBindings(nameLabel)]];
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]-[nameLabel(40)]-|"
+	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]-(34)-[nameLabel(40)]-|"
 																 options:0 metrics:nil
 																   views:NSDictionaryOfVariableBindings(imageView, nameLabel)]];
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4334BB431B81AB5000E8235A /* UIColor+Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = 4334BB411B81AB5000E8235A /* UIColor+Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4334BB441B81AB5000E8235A /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4334BB421B81AB5000E8235A /* UIColor+Colors.m */; };
+		434AAB651B82F0560090732F /* NGMembersQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 434AAB641B82F0560090732F /* NGMembersQuiz.m */; };
 		435BBD801B7D90490084A1C5 /* NGMember.h in Headers */ = {isa = PBXBuildFile; fileRef = 435BBD7E1B7D90490084A1C5 /* NGMember.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		435BBD811B7D90490084A1C5 /* NGMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD7F1B7D90490084A1C5 /* NGMember.m */; };
 		435BBD841B7D908C0084A1C5 /* NGMemberSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */; };
@@ -23,6 +24,12 @@
 		43877A411B82C78600BE49BB /* NGPreferencesSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A401B82C78600BE49BB /* NGPreferencesSpecs.m */; };
 		43877A441B82C82F00BE49BB /* NGPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 43877A421B82C82F00BE49BB /* NGPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43877A451B82C82F00BE49BB /* NGPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A431B82C82F00BE49BB /* NGPreferences.m */; };
+		43877A481B82D7F800BE49BB /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A471B82D7F800BE49BB /* QuizViewController.m */; };
+		43877A4B1B82DD0900BE49BB /* NGQuizSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A4A1B82DD0900BE49BB /* NGQuizSpecs.m */; };
+		43877A4C1B82DD6100BE49BB /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF791B7CD74700C71B09 /* Expecta.framework */; };
+		43877A4D1B82DD6100BE49BB /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439AFF7A1B7CD74700C71B09 /* Specta.framework */; };
+		43877A521B82DE9D00BE49BB /* NGPersistenceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A511B82DE9D00BE49BB /* NGPersistenceHelper.m */; };
+		43877A571B82DFE800BE49BB /* NGQuiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A561B82DFE800BE49BB /* NGQuiz.m */; };
 		439AFF221B7C1F9200C71B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF211B7C1F9200C71B09 /* main.m */; };
 		439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF241B7C1F9200C71B09 /* AppDelegate.m */; };
 		439AFF2B1B7C1F9200C71B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF291B7C1F9200C71B09 /* Main.storyboard */; };
@@ -102,6 +109,8 @@
 /* Begin PBXFileReference section */
 		4334BB411B81AB5000E8235A /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Colors.h"; path = "Helpers/UIColor+Colors.h"; sourceTree = "<group>"; };
 		4334BB421B81AB5000E8235A /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "Helpers/UIColor+Colors.m"; sourceTree = "<group>"; };
+		434AAB631B82F0560090732F /* NGMembersQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGMembersQuiz.h; path = Models/NGMembersQuiz.h; sourceTree = "<group>"; };
+		434AAB641B82F0560090732F /* NGMembersQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMembersQuiz.m; path = Models/NGMembersQuiz.m; sourceTree = "<group>"; };
 		435BBD7E1B7D90490084A1C5 /* NGMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGMember.h; path = Models/NGMember.h; sourceTree = "<group>"; };
 		435BBD7F1B7D90490084A1C5 /* NGMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMember.m; path = Models/NGMember.m; sourceTree = "<group>"; };
 		435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMemberSpecs.m; path = Models/NGMemberSpecs.m; sourceTree = "<group>"; };
@@ -122,6 +131,13 @@
 		43877A401B82C78600BE49BB /* NGPreferencesSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGPreferencesSpecs.m; path = Models/NGPreferencesSpecs.m; sourceTree = "<group>"; };
 		43877A421B82C82F00BE49BB /* NGPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGPreferences.h; path = Models/NGPreferences.h; sourceTree = "<group>"; };
 		43877A431B82C82F00BE49BB /* NGPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGPreferences.m; path = Models/NGPreferences.m; sourceTree = "<group>"; };
+		43877A461B82D7F800BE49BB /* QuizViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuizViewController.h; path = "View Controllers/QuizViewController.h"; sourceTree = "<group>"; };
+		43877A471B82D7F800BE49BB /* QuizViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuizViewController.m; path = "View Controllers/QuizViewController.m"; sourceTree = "<group>"; };
+		43877A4A1B82DD0900BE49BB /* NGQuizSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGQuizSpecs.m; path = Models/NGQuizSpecs.m; sourceTree = "<group>"; };
+		43877A501B82DE9D00BE49BB /* NGPersistenceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGPersistenceHelper.h; path = NameGameKitTests/Helpers/NGPersistenceHelper.h; sourceTree = SOURCE_ROOT; };
+		43877A511B82DE9D00BE49BB /* NGPersistenceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGPersistenceHelper.m; path = NameGameKitTests/Helpers/NGPersistenceHelper.m; sourceTree = SOURCE_ROOT; };
+		43877A551B82DFE800BE49BB /* NGQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGQuiz.h; path = Models/NGQuiz.h; sourceTree = "<group>"; };
+		43877A561B82DFE800BE49BB /* NGQuiz.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGQuiz.m; path = Models/NGQuiz.m; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439AFF211B7C1F9200C71B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -182,6 +198,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43877A4C1B82DD6100BE49BB /* Expecta.framework in Frameworks */,
+				43877A4D1B82DD6100BE49BB /* Specta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +286,8 @@
 			children = (
 				436808CC1B7EA10000C9417D /* LearnViewController.h */,
 				436808CD1B7EA10000C9417D /* LearnViewController.m */,
+				43877A461B82D7F800BE49BB /* QuizViewController.h */,
+				43877A471B82D7F800BE49BB /* QuizViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -291,11 +311,40 @@
 			name = JMImageCache;
 			sourceTree = "<group>";
 		};
+		43877A4F1B82DE8B00BE49BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				43877A501B82DE9D00BE49BB /* NGPersistenceHelper.h */,
+				43877A511B82DE9D00BE49BB /* NGPersistenceHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		43877A531B82DFBC00BE49BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43877A551B82DFE800BE49BB /* NGQuiz.h */,
+				43877A561B82DFE800BE49BB /* NGQuiz.m */,
+				434AAB631B82F0560090732F /* NGMembersQuiz.h */,
+				434AAB641B82F0560090732F /* NGMembersQuiz.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		43877A541B82DFC900BE49BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				43877A4A1B82DD0900BE49BB /* NGQuizSpecs.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		439AFF131B7C1F9100C71B09 = {
 			isa = PBXGroup;
 			children = (
 				439AFF1E1B7C1F9200C71B09 /* NameGame */,
 				439AFF381B7C1F9300C71B09 /* NameGameTests */,
+				439AFF391B7C1F9300C71B09 /* Supporting Files */,
 				439AFF4B1B7C1FF500C71B09 /* NameGameKit */,
 				439AFF5A1B7C1FF500C71B09 /* NameGameKitTests */,
 				439AFF7E1B7CD78400C71B09 /* Frameworks */,
@@ -318,6 +367,7 @@
 		439AFF1E1B7C1F9200C71B09 /* NameGame */ = {
 			isa = PBXGroup;
 			children = (
+				43877A531B82DFBC00BE49BB /* Models */,
 				436808CB1B7EA0E300C9417D /* View Controllers */,
 				436808C61B7E397B00C9417D /* Views */,
 				439AFF231B7C1F9200C71B09 /* AppDelegate.h */,
@@ -343,7 +393,8 @@
 		439AFF381B7C1F9300C71B09 /* NameGameTests */ = {
 			isa = PBXGroup;
 			children = (
-				439AFF391B7C1F9300C71B09 /* Supporting Files */,
+				43877A4F1B82DE8B00BE49BB /* Helpers */,
+				43877A541B82DFC900BE49BB /* Models */,
 			);
 			path = NameGameTests;
 			sourceTree = "<group>";
@@ -354,6 +405,7 @@
 				439AFF3A1B7C1F9300C71B09 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			path = NameGameTests;
 			sourceTree = "<group>";
 		};
 		439AFF4B1B7C1FF500C71B09 /* NameGameKit */ = {
@@ -530,6 +582,7 @@
 				439AFF311B7C1F9300C71B09 /* Sources */,
 				439AFF321B7C1F9300C71B09 /* Frameworks */,
 				439AFF331B7C1F9300C71B09 /* Resources */,
+				43877A4E1B82DD7000BE49BB /* Embed Carthage Frameworks */,
 			);
 			buildRules = (
 			);
@@ -660,6 +713,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43877A4E1B82DD7000BE49BB /* Embed Carthage Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Specta.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Expecta.framework",
+			);
+			name = "Embed Carthage Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		439AFF7D1B7CD74C00C71B09 /* Embed Carthage Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -689,7 +758,10 @@
 				436809041B7FEA6600C9417D /* UIImageView+JMImageCache.m in Sources */,
 				439AFF221B7C1F9200C71B09 /* main.m in Sources */,
 				436809031B7FEA6600C9417D /* JMImageCache.m in Sources */,
+				43877A571B82DFE800BE49BB /* NGQuiz.m in Sources */,
+				434AAB651B82F0560090732F /* NGMembersQuiz.m in Sources */,
 				436808CE1B7EA10000C9417D /* LearnViewController.m in Sources */,
+				43877A481B82D7F800BE49BB /* QuizViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +769,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43877A521B82DE9D00BE49BB /* NGPersistenceHelper.m in Sources */,
+				43877A4B1B82DD0900BE49BB /* NGQuizSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +960,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -905,6 +980,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = NameGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

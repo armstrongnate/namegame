@@ -9,7 +9,9 @@
 @import NameGameKit;
 
 #import "LearnViewController.h"
+#import "QuizViewController.h"
 #import "MemberView.h"
+#import "NGMembersQuiz.h"
 
 @interface LearnViewController ()
 
@@ -52,8 +54,9 @@
 	{
     	NSOperationQueue *queue = [NSOperationQueue new];
     	NGGetMembersOperation *membersOperation = [[NGGetMembersOperation alloc] initWithContext:context completionHandler:^{
-			[self.prefs setHasDownloadedMembers:YES];
-			[self updateUI];
+			dispatch_async(dispatch_get_main_queue(), ^{
+				[self updateUI];
+			});
     	}];
     	[queue addOperation:membersOperation];
 	}
@@ -77,6 +80,21 @@
 {
 	self.againButton.hidden = YES;
 	[self updateUI];
+}
+
+- (IBAction)unwindFromQuiz:(UIStoryboardSegue *)segue
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:@"setQuiz:"])
+	{
+		QuizViewController *quizVC = (QuizViewController *)segue.destinationViewController;
+		NGMembersQuiz *quiz = [[NGMembersQuiz alloc] initWithContext:self.context];
+		quizVC.quiz = quiz;
+	}
 }
 
 #pragma mark - SwipeStackViewDataSource
