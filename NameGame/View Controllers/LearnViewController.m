@@ -52,9 +52,11 @@
 
 	if (![self.prefs hasDownloadedMembers])
 	{
+		self.downloadingLabel.hidden = NO;
     	NSOperationQueue *queue = [NSOperationQueue new];
     	NGGetMembersOperation *membersOperation = [[NGGetMembersOperation alloc] initWithContext:context completionHandler:^{
 			dispatch_async(dispatch_get_main_queue(), ^{
+				self.downloadingLabel.hidden = YES;
 				[self updateUI];
 			});
     	}];
@@ -72,7 +74,14 @@
 	[self.fetchedResultsController performFetch:&fetchError];
 	if (fetchError == nil)
 	{
-    	[self.membersStackView reload];
+		if ([self.fetchedResultsController fetchedObjects].count < 1)
+		{
+            self.resetButton.hidden = NO;
+		}
+		else
+		{
+        	[self.membersStackView reload];
+		}
 	}
 }
 
@@ -85,6 +94,22 @@
 - (IBAction)unwindFromQuiz:(UIStoryboardSegue *)segue
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)resetButtonTapped:(id)sender
+{
+	self.fetchedResultsController.fetchRequest.predicate = nil;
+	NSError *fetchError = nil;
+	[self.fetchedResultsController performFetch:&fetchError];
+	if (fetchError == nil)
+	{
+    	[[self.fetchedResultsController fetchedObjects] enumerateObjectsUsingBlock:^(NGMember *member, NSUInteger idx, BOOL *stop) {
+			member.memorized = NO;
+		}];
+    	self.fetchedResultsController.fetchRequest.predicate = [NSPredicate predicateWithFormat:@"memorized == NO"];
+		self.resetButton.hidden = YES;
+		[self updateUI];
+	}
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

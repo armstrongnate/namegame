@@ -16,7 +16,10 @@
 @property (nonatomic, weak) IBOutlet SwipeStackView *membersStackView;
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, weak) IBOutlet UIButton *againButton;
+@property (nonatomic, weak) IBOutlet UIButton *resetButton;
+@property (nonatomic, weak) IBOutlet UILabel *downloadingLabel;
 
 - (IBAction)againButtonTapped:(id)sender;
+- (IBAction)resetButtonTapped:(id)sender;
 
 @end
