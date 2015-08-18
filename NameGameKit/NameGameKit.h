@@ -6,9 +6,17 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
+// Persistence
 #import "NGPersistenceController.h"
+
+// App Operations
 #import "NGGetMembersOperation.h"
+
+// Models
 #import "NGMember.h"
+#import "NGPreferences.h"
+
+// Helpers
 #import "UIColor+Colors.h"
 
 //! Project version number for NameGameKit.

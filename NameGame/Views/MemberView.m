@@ -28,6 +28,11 @@
 	return self;
 }
 
+- (void)dealloc
+{
+	[self.member removeObserver:self forKeyPath:@"memorized"];
+}
+
 - (UIImageView *)imageView
 {
 	if (!_imageView)
@@ -97,6 +102,8 @@
 	self.backgroundColor = [UIColor whiteColor];
 	self.layer.cornerRadius = cornerRadius;
 	self.clipsToBounds = YES;
+	self.layer.borderColor = [UIColor lightGrayColor].CGColor;
+	self.layer.borderWidth = 1.0;
 	[self.imageView setImageWithURL:[NSURL URLWithString:self.member.pictureUrl]];
 	self.nameLabel.text = self.member.name;
 	[self.nameLabel sizeToFit];
@@ -118,7 +125,7 @@
 	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[imageView]|"
 																 options:0 metrics:nil
 																   views:NSDictionaryOfVariableBindings(imageView)]];
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[nameLabel]-|"
+	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(20)-[nameLabel]-|"
 																 options:0 metrics:nil
 																   views:NSDictionaryOfVariableBindings(nameLabel)]];
 	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[imageView]-[nameLabel(40)]-|"

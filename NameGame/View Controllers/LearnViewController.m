@@ -14,6 +14,7 @@
 @interface LearnViewController ()
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NGPreferences *prefs;
 
 @end
 
@@ -26,6 +27,12 @@
 	[self.membersStackView setTranslatesAutoresizingMaskIntoConstraints:NO];
 }
 
+- (NGPreferences *)prefs
+{
+	if (!_prefs) _prefs = [[NGPreferences alloc] init];
+	return _prefs;
+}
+
 - (void)setContext:(NSManagedObjectContext *)context
 {
 	_context = context;
@@ -35,21 +42,25 @@
 	request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
 															  ascending:YES
 															   selector:@selector(localizedCaseInsensitiveCompare:)]];
-	request.predicate = nil;
+	request.predicate = [NSPredicate predicateWithFormat:@"memorized == NO"];
 	self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
 																		managedObjectContext:context
 																		  sectionNameKeyPath:nil
 																				   cacheName:nil];
 
-	if ([self.fetchedResultsController fetchedObjects].count <= 0)
+	if (![self.prefs hasDownloadedMembers])
 	{
     	NSOperationQueue *queue = [NSOperationQueue new];
     	NGGetMembersOperation *membersOperation = [[NGGetMembersOperation alloc] initWithContext:context completionHandler:^{
+			[self.prefs setHasDownloadedMembers:YES];
 			[self updateUI];
     	}];
     	[queue addOperation:membersOperation];
 	}
-	[self updateUI];
+	else
+	{
+    	[self updateUI];
+	}
 }
 
 - (void)updateUI
@@ -79,6 +90,7 @@
 {
 	NGMember *member = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	MemberView *view = [[MemberView alloc] initWithMember:member];
+	[view hideMemorizedIndicators];
 	return view;
 }
 

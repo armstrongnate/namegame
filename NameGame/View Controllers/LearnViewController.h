@@ -13,8 +13,9 @@
 
 @interface LearnViewController : UIViewController <SwipeStackViewDataSource, SwipeStackViewDelegate>
 
-@property (nonatomic, strong) IBOutlet SwipeStackView *membersStackView;
+@property (nonatomic, weak) IBOutlet SwipeStackView *membersStackView;
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, weak) IBOutlet UIButton *againButton;
 
 - (IBAction)againButtonTapped:(id)sender;
 

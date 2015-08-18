@@ -134,12 +134,12 @@ NSUInteger const NumberOfViewsInStack = 3;
 		case UIGestureRecognizerStateEnded:
 		case UIGestureRecognizerStateCancelled:
 			[self.animator removeAllBehaviors];
-			if ([self.delegate respondsToSelector:@selector(swipeStackView:didCancelSwipingView:)])
-			{
-				[self.delegate swipeStackView:self didCancelSwipingView:gesture.view];
-			}
 			if (gesture.state == UIGestureRecognizerStateCancelled || !_shouldComplete)
 			{
+    			if ([self.delegate respondsToSelector:@selector(swipeStackView:didCancelSwipingView:)])
+    			{
+    				[self.delegate swipeStackView:self didCancelSwipingView:gesture.view];
+    			}
 				[self cancelSwipeGesture:gesture startCenter:startCenter];
 			}
 			else

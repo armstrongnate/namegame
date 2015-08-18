@@ -20,6 +20,9 @@
 		436809031B7FEA6600C9417D /* JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809001B7FEA6600C9417D /* JMImageCache.m */; };
 		436809041B7FEA6600C9417D /* UIImageView+JMImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809021B7FEA6600C9417D /* UIImageView+JMImageCache.m */; };
 		436809081B804E4C00C9417D /* MemberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 436809071B804E4C00C9417D /* MemberView.m */; };
+		43877A411B82C78600BE49BB /* NGPreferencesSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A401B82C78600BE49BB /* NGPreferencesSpecs.m */; };
+		43877A441B82C82F00BE49BB /* NGPreferences.h in Headers */ = {isa = PBXBuildFile; fileRef = 43877A421B82C82F00BE49BB /* NGPreferences.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43877A451B82C82F00BE49BB /* NGPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 43877A431B82C82F00BE49BB /* NGPreferences.m */; };
 		439AFF221B7C1F9200C71B09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF211B7C1F9200C71B09 /* main.m */; };
 		439AFF251B7C1F9200C71B09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 439AFF241B7C1F9200C71B09 /* AppDelegate.m */; };
 		439AFF2B1B7C1F9200C71B09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439AFF291B7C1F9200C71B09 /* Main.storyboard */; };
@@ -116,6 +119,9 @@
 		436809061B804E4C00C9417D /* MemberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberView.h; path = Views/MemberView.h; sourceTree = "<group>"; };
 		436809071B804E4C00C9417D /* MemberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberView.m; path = Views/MemberView.m; sourceTree = "<group>"; };
 		436809091B810B1000C9417D /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
+		43877A401B82C78600BE49BB /* NGPreferencesSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGPreferencesSpecs.m; path = Models/NGPreferencesSpecs.m; sourceTree = "<group>"; };
+		43877A421B82C82F00BE49BB /* NGPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGPreferences.h; path = Models/NGPreferences.h; sourceTree = "<group>"; };
+		43877A431B82C82F00BE49BB /* NGPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGPreferences.m; path = Models/NGPreferences.m; sourceTree = "<group>"; };
 		439AFF1C1B7C1F9200C71B09 /* NameGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439AFF201B7C1F9200C71B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439AFF211B7C1F9200C71B09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -214,6 +220,8 @@
 			children = (
 				435BBD7E1B7D90490084A1C5 /* NGMember.h */,
 				435BBD7F1B7D90490084A1C5 /* NGMember.m */,
+				43877A421B82C82F00BE49BB /* NGPreferences.h */,
+				43877A431B82C82F00BE49BB /* NGPreferences.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				435BBD831B7D908C0084A1C5 /* NGMemberSpecs.m */,
+				43877A401B82C78600BE49BB /* NGPreferencesSpecs.m */,
 			);
 			name = "Model Specs";
 			sourceTree = "<group>";
@@ -487,6 +496,7 @@
 				439AFF6D1B7C415400C71B09 /* NGOperation.h in Headers */,
 				435BBD801B7D90490084A1C5 /* NGMember.h in Headers */,
 				439AFF711B7C48AE00C71B09 /* NGGroupOperation.h in Headers */,
+				43877A441B82C82F00BE49BB /* NGPreferences.h in Headers */,
 				439AFFA11B7D835300C71B09 /* NGParseMembersOperation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +713,7 @@
 				436808C11B7E276000C9417D /* NGGetMembersOperation.m in Sources */,
 				4334BB441B81AB5000E8235A /* UIColor+Colors.m in Sources */,
 				439AFF761B7C507700C71B09 /* NGURLSessionTaskOperation.m in Sources */,
+				43877A451B82C82F00BE49BB /* NGPreferences.m in Sources */,
 				439AFF981B7D800700C71B09 /* NGPersistenceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -712,6 +723,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				436808C31B7E278E00C9417D /* NGGetMembersOperationSpecs.m in Sources */,
+				43877A411B82C78600BE49BB /* NGPreferencesSpecs.m in Sources */,
 				439AFF8E1B7CED9F00C71B09 /* NGDownloadMembersOperationSpecs.m in Sources */,
 				439AFF9E1B7D822F00C71B09 /* NGPersistenceHelper.m in Sources */,
 				435BBD841B7D908C0084A1C5 /* NGMemberSpecs.m in Sources */,
