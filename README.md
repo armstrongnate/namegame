@@ -6,7 +6,7 @@ people that work at [WillowTree](http://willowtreeapps.com/). I was interviewing
 for a job there and I wanted to impress the interviewer so I whipped this up
 before the interview.
 
-Swiping to the right will mark the employee as remembered and swiping to the right
+Swiping to the right will mark the employee as remembered and swiping to the left
 means that name is not yet memorized. Remembered employees are removed from the pile
 so when it resets only the non-remembered employees are shown.
 
