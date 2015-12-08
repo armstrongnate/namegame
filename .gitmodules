@@ -1,3 +1,4 @@
 [submodule "Vendor/JMImageCache"]
 	path = Vendor/JMImageCache
 	url = https://github.com/n8armstrong/JMImageCache.git
+  branch = master
