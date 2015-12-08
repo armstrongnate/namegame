@@ -138,7 +138,7 @@
 	CGFloat const memorizedMargin = 30;
 	[self addConstraints:@[
     	[NSLayoutConstraint constraintWithItem:memorized
-									 attribute:NSLayoutAttributeLeft
+									 attribute:NSLayoutAttributeLeading
 									 relatedBy:NSLayoutRelationEqual
 										toItem:imageView
 									 attribute:NSLayoutAttributeLeading
@@ -166,7 +166,7 @@
 	UIImageView *notMemorized = self.notMemorizedImageView;
 	[self addConstraints:@[
     	[NSLayoutConstraint constraintWithItem:notMemorized
-									 attribute:NSLayoutAttributeRight
+									 attribute:NSLayoutAttributeTrailing
 									 relatedBy:NSLayoutRelationEqual
 										toItem:imageView
 									 attribute:NSLayoutAttributeTrailing
