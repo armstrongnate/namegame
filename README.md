@@ -3,7 +3,7 @@ Name Game
 
 This is a little iOS app I wrote for learning the names and faces of the nice
 people that work at [WillowTree](http://willowtreeapps.com/). I was interviewing
-for a job there and I wanted to impress the interviewer so I whipped this up
+for a job there and I thought the interviewer might like it so I whipped this up
 before the interview.
 
 Swiping to the right will mark the employee as remembered and swiping to the left
